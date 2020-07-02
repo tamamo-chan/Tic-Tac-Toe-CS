@@ -3,51 +3,56 @@
 namespace TicTacToe 
 { 
 
-    class TTTile
+    class Tile
     {
         Player owner = null;
-        public TTTile(Player s)
+        public Tile(Player p)
         {
-            owner = s;
+            owner = p;
         }
 
-        public Player getOwner()
+        public string GetOwner()
         {
-            return owner;
+            return owner.ID;
+        }
+
+        public void SetOwner(Player p)
+        {
+            owner = p;
         }
     }
 
     class Player
     {
-        string name;
-        string sign;
+        public string name;
+        public string ID;
 
-        public Player(string s, string mark)
+        public Player(string name, string ID)
         {
-            name = s;
-            sign = mark;
+            this.name = name;
+            this.ID = ID;
         }
 
-        public string getName()
+        public string GetName()
         {
             return name;
         }
     }
 
-    class TTTBoard
+    class Board
     {
 
-        public static TTTile[,] board = new TTTile[3, 3];
+        public static Tile[,] board = new Tile[3, 3];
 
-        public void initialize()
+        public Board()
         {
             int count = 1;
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Player test = new Player(null, count.ToString());
-                    TTTile temp = new TTTile(test);
+                    Player test = new Player("Board", count.ToString());
+                    Tile temp = new Tile(test);
                     board[i, j] = temp;
                     count++;
 
@@ -55,17 +60,17 @@ namespace TicTacToe
             }
         }
         
-        public void printBoard()
+        public void PrintBoard()
         {
             for (int i = 0; i < board.GetLength(0); i++)
             {
-                Console.WriteLine($"{board[i, 0].getOwner().getName()}|{board[i, 1].getOwner().getName()}|{board[i, 2].getOwner().getName()}");
+                Console.WriteLine($"{board[i, 0].GetOwner()}|{board[i, 1].GetOwner()}|{board[i, 2].GetOwner()}");
             }
         }
 
-        static void setOwner(int i, int j, Player player)
+        static void SetOwner(int i, int j, Player player)
         {
-            TTTile tile = new TTTile(player);
+            Tile tile = new Tile(player);
         }
     }
 
@@ -75,27 +80,11 @@ namespace TicTacToe
     {
         static void Main(string[] args)
         {
-            TTTile[,] board = new TTTile[3, 3];
-            int r = 3;
-            Console.WriteLine(r.ToString());
-            Console.WriteLine("test");
-
-            int count = 1;
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Player test = new Player(count.ToString(), count.ToString());
-                    TTTile temp = new TTTile(test);
-                    board[i, j] = temp;
-                    count++;
-
-                }
-            }
-            for (int i = 0; i < board.GetLength(0); i++)
-            {
-                Console.WriteLine($"{board[i, 0].getOwner().getName()}|{board[i, 1].getOwner().getName()}|{board[i, 2].getOwner().getName()}");
-            }
+            Board board = new Board();
+            board.PrintBoard();
+            
+            Player p1 = new Player("Player 1", "X");
+            Player p2 = new Player("Player 2", "O");
         }
     }
 }

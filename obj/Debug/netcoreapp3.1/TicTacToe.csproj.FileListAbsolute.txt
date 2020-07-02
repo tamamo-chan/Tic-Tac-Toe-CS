@@ -11,3 +11,16 @@ D:\Users\Piratica\source\repos\TicTacToe\obj\Debug\netcoreapp3.1\TicTacToe.cspro
 D:\Users\Piratica\source\repos\TicTacToe\obj\Debug\netcoreapp3.1\TicTacToe.dll
 D:\Users\Piratica\source\repos\TicTacToe\obj\Debug\netcoreapp3.1\TicTacToe.pdb
 D:\Users\Piratica\source\repos\TicTacToe\obj\Debug\netcoreapp3.1\TicTacToe.genruntimeconfig.cache
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\bin\Debug\netcoreapp3.1\TicTacToe.exe
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\bin\Debug\netcoreapp3.1\TicTacToe.deps.json
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\bin\Debug\netcoreapp3.1\TicTacToe.runtimeconfig.json
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\bin\Debug\netcoreapp3.1\TicTacToe.runtimeconfig.dev.json
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\bin\Debug\netcoreapp3.1\TicTacToe.dll
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\bin\Debug\netcoreapp3.1\TicTacToe.pdb
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\obj\Debug\netcoreapp3.1\TicTacToe.csprojAssemblyReference.cache
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\obj\Debug\netcoreapp3.1\TicTacToe.AssemblyInfoInputs.cache
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\obj\Debug\netcoreapp3.1\TicTacToe.AssemblyInfo.cs
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\obj\Debug\netcoreapp3.1\TicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\obj\Debug\netcoreapp3.1\TicTacToe.dll
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\obj\Debug\netcoreapp3.1\TicTacToe.pdb
+C:\Users\Piratica\source\repos\Tic-Tac-Toe-CS\obj\Debug\netcoreapp3.1\TicTacToe.genruntimeconfig.cache
