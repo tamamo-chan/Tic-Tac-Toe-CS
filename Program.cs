@@ -76,13 +76,16 @@ namespace TicTacToe
         static void Main(string[] args)
         {
             TTTile[,] board = new TTTile[3, 3];
+            int r = 3;
+            Console.WriteLine(r.ToString());
+            Console.WriteLine("test");
 
             int count = 1;
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    Player test = new Player(null, count.ToString());
+                    Player test = new Player(count.ToString(), count.ToString());
                     TTTile temp = new TTTile(test);
                     board[i, j] = temp;
                     count++;
