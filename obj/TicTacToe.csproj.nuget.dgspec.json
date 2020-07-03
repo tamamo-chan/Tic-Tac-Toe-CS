@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Piratica\\source\\repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj": {}
+    "C:\\Users\\Piratica\\Source\\Repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Piratica\\source\\repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj": {
+    "C:\\Users\\Piratica\\Source\\Repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Piratica\\source\\repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj",
+        "projectUniqueName": "C:\\Users\\Piratica\\Source\\Repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj",
         "projectName": "TicTacToe",
-        "projectPath": "C:\\Users\\Piratica\\source\\repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj",
+        "projectPath": "C:\\Users\\Piratica\\Source\\Repos\\Tic-Tac-Toe-CS\\TicTacToe.csproj",
         "packagesPath": "C:\\Users\\Piratica\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Piratica\\source\\repos\\Tic-Tac-Toe-CS\\obj\\",
+        "outputPath": "C:\\Users\\Piratica\\Source\\Repos\\Tic-Tac-Toe-CS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Piratica\\AppData\\Roaming\\NuGet\\NuGet.Config",
