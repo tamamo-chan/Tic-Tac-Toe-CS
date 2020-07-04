@@ -46,11 +46,12 @@ namespace TicTacToe
 
     class Board
     {
-
+        // Represent board as a 3x3 array, each entry containing a tile a player can own.
         public Tile[,] board = new Tile[3, 3];
 
         public Board()
         {
+            // Fill the board with dummy controlled tiles, ensure the owner is null, so we can use this to check if a move is valid. 
             int count = 1;
             for (int i = 0; i < 3; i++)
             {
@@ -65,12 +66,24 @@ namespace TicTacToe
             }
         }
 
+        private void WriteLine(string s)
+        {
+            Console.WriteLine(s);
+        }
+
         public void PrintBoard()
         {
-            for (int i = 0; i < board.GetLength(0); i++)
-            {
-                Console.WriteLine($"{board[i, 0].GetOwner()}|{board[i, 1].GetOwner()}|{board[i, 2].GetOwner()}");
-            }
+            // Credit to https://github.com/ZacharyPatten for the pretty printing. 
+            WriteLine("");
+            WriteLine($" {board[0, 0].GetOwner()}  ║  {board[0, 1].GetOwner()}  ║  {board[0, 2].GetOwner()}");
+            WriteLine("    ║     ║");
+            WriteLine(" ═══╬═════╬═══");
+            WriteLine("    ║     ║");
+            WriteLine($" {board[1, 0].GetOwner()}  ║  {board[1, 1].GetOwner()}  ║  {board[1, 2].GetOwner()}");
+            WriteLine("    ║     ║");
+            WriteLine(" ═══╬═════╬═══");
+            WriteLine("    ║     ║");
+            WriteLine($" {board[2, 0].GetOwner()}  ║  {board[2, 1].GetOwner()}  ║  {board[2, 2].GetOwner()}");
         }
 
         public void SetOwner(int i, int j, Player player)
@@ -89,7 +102,8 @@ namespace TicTacToe
         static public Player p1 = new Player("Player 1", "X");
         static public Player p2 = new Player("Player 2", "O");
 
-        static private Player GetPlayer(int i)
+        // GetPlayer will be able to find the correct player based on the current turn. 
+        private static Player GetPlayer(int i)
         {
             if (i.Equals(1))
             {
@@ -98,7 +112,8 @@ namespace TicTacToe
             else return p2;
         }
 
-        static bool ValidChoice(Tile t)
+        // ValidChoice will check if the tile has an owner. 
+        private static bool ValidChoice(Tile t)
         {
             if (t.GetPlayer().name == null)
             {
@@ -107,7 +122,7 @@ namespace TicTacToe
             return false;
         }
 
-        static Player CheckWinner(Board b)
+        private static Player CheckWinner(Board b)
         {
             for (int i = 0; i < b.board.GetLength(0); i++)
             {
@@ -137,7 +152,7 @@ namespace TicTacToe
             return null;
         }
 
-        static private void NewTurn(Board b)
+        private static void NewTurn(Board b)
         {
             Player current = GetPlayer(turn % 2);
             Console.WriteLine($"{current.name}'s turn.");
@@ -147,6 +162,8 @@ namespace TicTacToe
 
             bool success = int.TryParse(input, out number);
 
+            //Check the user inputs an actual integer, also check if it is between 1-9.
+
             if (!success | number < 1 | number > 9)
             {
                 Console.WriteLine("You did not enter a correct number, try again.");
@@ -155,6 +172,7 @@ namespace TicTacToe
             }
 
 
+            // Calculate placement on the 3x3 board. 
             int column = (number - 1) % 3;
 
             int row = (number - 1) / 3;
@@ -193,7 +211,7 @@ namespace TicTacToe
 
         }
 
-        static void StartGame()
+        private static void StartGame()
         {
             Board board = new Board();
             board.PrintBoard();
