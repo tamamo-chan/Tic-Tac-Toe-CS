@@ -42,6 +42,11 @@ namespace TicTacToe
         {
             return name;
         }
+
+        public void InitializeAI(Board b)
+        {
+            
+        }
     }
 
     class Board
@@ -97,6 +102,46 @@ namespace TicTacToe
 
     class GameLogic
     {
+        private bool WinOrBlock(Board b)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    // Check for horizontal next to each other. 
+                    if (b.board[i, j].GetOwner() == b.board[i, j + 1].GetOwner() & b.board[i, j].GetOwner() != null)
+                    {
+                        b.board[i, (j + 2) % 3].SetOwner(p2);
+                        return true;
+                    }
+
+                    // Check for vertical next to each other.
+                    if (b.board[i, j].GetOwner() == b.board[i + 1, j].GetOwner() & b.board[i, j].GetOwner() != null)
+                    {
+                        b.board[(i + 2) % 3, j].SetOwner(p2);
+                        return true;
+                    }
+                }
+
+                // Check for diagonal top left to bottom right next to each other. 
+                if (b.board[i, i].GetOwner() == b.board[i+1, i + 1].GetOwner() & b.board[i, i].GetOwner() != null)
+                {
+                    b.board[(i + 2) % 3, (i + 2) % 3].SetOwner(p2);
+                    return true;
+                }
+
+                // Check for diagonal top right to bottom left next to each other. 
+                if (b.board[i, 2-i].GetOwner() == b.board[i + 1, 2-i - 1].GetOwner() & b.board[i, 2-1].GetOwner() != null)
+                {
+                    b.board[(i + 2) % 3, (-i) % 3].SetOwner(p2);
+                    return true;
+                }
+
+                // still need to check tiles two blocks from each other
+
+
+            }
+        }
         static public int turn = 1;
 
         static public Player p1 = new Player("Player 1", "X");
